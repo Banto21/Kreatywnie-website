@@ -1,0 +1,302 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a { 
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+/* ---- Navigation ---- */
+.name {
+	font-size: 1.25em;
+	margin: 0;
+	padding-top: 10px;
+	height: 48px;
+	width: 240px;
+	display: inline-block;
+}
+
+img {
+	height: 100%;
+	width: auto;
+}
+
+.name,
+.main-nav li {
+	text-align: center;
+	background: #fff;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #eb1478;
+	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
+}
+
+
+.main-nav a:hover {
+	color: #920d50;
+	border-bottom: 3px solid rgb(208, 211, 12);
+	z-index: 201;
+}
+
+.main-nav a,
+.name a {
+	padding: 10px 15px;
+	display: block;
+	}
+
+
+
+/* ---- Layout Containers ---- */
+.banner {
+	width: 100%;
+	height: 600px;
+	color: #fff;
+
+	position: relative;
+
+	background: linear-gradient(#f35daf, transparent 90%),
+				linear-gradient(0deg, #fff, transparent 90%),
+				url("../jpg//work_theme.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	text-align: center;
+	padding: 3.2em;
+}
+
+
+
+.main {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+.main-header {
+	background: #fff;
+	text-align: center;
+}
+
+.main-footer {
+	padding: 1em 0;
+	background: #d9e4ea;
+	text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+.welcome {
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
+
+}
+
+
+/* ---- Contanct card ---- */
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	width: 310px;
+}
+
+.contact img {
+	height: 64px;
+	margin-right: 1em;
+}
+
+.address {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.email {
+	font-style: normal;
+}
+
+
+
+
+
+/* ================================= 
+  Media quieries 
+==================================== */
+
+@media (min-width:769px) {
+	body {
+		padding-top: 58px;
+	}
+
+
+	.main-header {
+		box-shadow: 0 1px 4px rgba(0,0,0,.4);
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 200;
+		max-height: 104px;
+
+	}
+
+
+	.container {
+		width: 70%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.wrap {
+		min-height: calc(100vh-89px);	
+	}
+
+
+
+
+	.main-nav li {
+		margin-left: 15px;
+		margin-right: -0.3125em; /* 5px */
+	}
+
+	.name,
+	.main-nav li {
+		border-radius: 4%;
+	}
+
+	.welcome {
+		width: 70%;
+	}
+
+	.headline {
+		font-size: 3em;
+		margin-bottom: 10px;
+	}
+	
+	.tagline {
+		font-size: 1.4em;
+	}
+
+/* ---- Link hover underlying animation ---- */
+ul li a {
+	position: relative;
+  }
+  ul li a::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 4px;
+	top: 100%;
+	left: 0;
+	background: #093a58;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: right;
+  }
+
+  .main-nav a:hover {
+	border-bottom: 0px;
+  }
+
+
+  ul li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+  }
+
+}
+
+@media (min-width:769px) and (max-width:1032px) {
+	.main-nav {
+		display: inline-block;
+	}
+
+
+	.main-nav li {
+		float: left;
+	}
+
+	.clearfix::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+
+
+}
+
+@media (min-width:1032px) {
+
+	.main-header {
+		max-height: 57px;
+	}
+	.name {
+		float: left;
+	}
+	.main-nav {
+		padding: 10px 0;
+		float: right;
+	}
+
+	.main-nav li {
+		float: left;
+	}
+
+	.clearfix::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	/* ---- Contact info ---- */
+}

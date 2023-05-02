@@ -1,0 +1,740 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	text-align: justify;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3 {
+	color:rgba(9, 58, 88, 0.6);
+	font-size: 1.8em;
+}
+
+
+a { 
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 1.5em;
+	text-align: center;
+
+}
+
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+
+/* ---- Navigation ---- */
+.main-header {
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+}
+
+.container-nav {
+	display: flex;
+
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+.name {
+	height: 48px;
+	width: 240px;
+	
+}
+
+img {
+	height: 48px;
+	width: auto;
+}
+
+/* ****Hamburger style**** */
+
+.hamburger {
+	height: 48px;
+	width: auto;
+	background-color: #fff;
+	border: none;
+}
+
+.hamburger img {
+	height: 44px;
+	padding-top: 1px;
+}
+
+
+
+.hamburger-main {
+	display: none;
+	font-size: 2em;
+	justify-content: center;
+	padding-top: 10%;
+}
+
+.hamburger-nav {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.hamburger-nav li {
+	width: 200px;
+	background-color: rgba(243, 36, 174, 0.9);
+}
+
+.hamburger-nav a {
+	color: #fff;
+}
+
+/* **** No hamburger menu **** */
+.main-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main-nav li {
+	display: flex;
+	text-align: center;
+	background: #fff;
+}
+
+.main-nav a {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: rgba(235, 30, 120, 0.6);
+	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
+}
+
+
+.main-nav a:hover {
+	color:  rgba(235, 30, 120, 1); /* #ec7aca; */
+	/* border-bottom: 3px solid rgb(15, 5, 158); */
+	z-index: 201;
+}
+
+.main-nav li a {
+	display: flex;
+	align-items: center;
+}
+
+/* ---- Link hover underlying animation ---- */
+ /* .main-header ul li a {
+	position: relative;
+  }
+  .main-header ul li a::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 4px;
+	top: 100%;
+	left: 0;
+	background: #093a58;
+	transition: transform 0.5s;
+	transform: scaleX(0);
+	transform-origin: right;
+  }
+
+
+
+  .main-nav a:hover {
+	border-bottom: 0px;
+	padding-top: 1px;
+  }
+
+
+  ul li a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+  } */
+
+
+
+/* ---- Layout Containers ---- */
+.banner {
+	width: 100%;
+	height: 600px;
+	color: #fff;
+
+	position: relative;
+
+	background: linear-gradient(0deg, #fff, transparent 30%),
+				linear-gradient(0deg, transparent 90%, #fff),
+				url("../jpg/grafikagrey.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	text-align: center;
+	padding: 3.2em;
+}
+
+
+
+.main {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+.main-header {
+	background: #fff;
+	text-align: center;
+}
+
+.main-footer {
+	padding: 1em 0;
+	background: #ccc;
+	text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+#about {
+	text-align: center;
+	font-weight: bold;
+	color:rgba(9, 58, 88, 0.6);
+	font-size: 1.8em;
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.02em;
+
+}
+
+
+
+.img-author {  
+	width: 85%;
+	height: auto;
+	border-radius: 80%;
+	align-self: center;
+}
+
+.oferta_tworze {
+	margin-bottom: 3em;
+}
+
+.tworze,
+.specjalizuje {
+	font-size: 1.2em;
+	color: rgba(0,0,0,.8)
+}
+
+.offer-list,
+.special-list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	font-size: 0.95em;
+	padding-left: .5em;
+}
+
+.offer-list li,
+.special-list li {
+	margin-top: 1em;
+	text-align: left;
+}
+
+
+.special-list:hover {
+	cursor: pointer;
+
+}
+
+#oferta {
+	margin-bottom: 2em;
+}
+
+.offer .bold {
+	font-weight: bold;
+}
+
+
+.offer-list > li::before,
+.special-list > li::before {
+	content: "\2022";
+	color: #eb1478;
+	font-weight: bold;
+	font-size: 1.4em;
+	display: inline-block;
+	width: 1em;
+	margin-left: 0;
+}
+
+/* .special-list > li::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #eb1478;
+	margin-right: 10px;
+	margin-top: 20px;
+	display: inline-block;
+
+} */
+
+
+.toggleLi {
+	display: none;
+	width: 300px;
+	border-radius: 2%;
+	padding: 12px 25px;
+
+	font-weight: bold;
+
+}
+
+#workflow {
+	margin-bottom: 1.5em;
+}
+
+/* ---- Recomendation carousel ---- */
+
+	#rekomendacje {
+		margin-top: 3em;
+		margin-bottom: 1.5em;
+	}
+
+	/* Slideshow container */
+	.slideshow-container {
+		max-width: 496px;
+		position: relative;
+		margin: auto;
+	}
+	
+	/* Hide the images by default */
+	.mySlides {
+		display: none;
+		background : #fff;
+		flex-direction: column;
+		align-content: space-between;
+		/*border-radius: 3%; */
+	}
+
+	.carousel-opinion {
+		display: inline-block;
+		margin: 0em 2em 1.5em 2em;
+	}
+	
+	/* Next & previous buttons */
+	.prev, .next {
+		cursor: pointer;
+		display: inline-block;
+		position: absolute;
+		top: 35%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: rgb(173, 12, 111);
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+
+	.prev {
+		left: -6%;
+	}
+	
+	/* Position the "next button" to the right */
+
+	.next {
+		right: -6%;
+		border-radius: 3px 0 0 3px;
+	}
+	
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+		background-color: rgba(194, 118, 178, 0.7);
+	}
+	
+	/* Caption text */
+	.text {
+		color: #000;
+		font-size: 0.9em;
+		font-weight: bold;
+		padding-top: 1em;
+		padding-right: 15px;
+		bottom: 8px;
+		width: 100%;
+		text-align: right;
+	}
+	
+	
+	/* The dots/bullets/indicators */
+	.dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+	
+	.active, .dot:hover {
+		background-color: #717171;
+	}
+	
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 2s;
+		animation-name: fade;
+		animation-duration: 2s;
+	}
+	
+	@-webkit-keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+	
+	@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+
+
+/* ---- Portfolio ---- */
+
+#portfolio {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.portfolio {
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio-list {
+	list-style: circle;
+	padding-left: 1em;
+
+	align-self: center;
+}
+
+.portfolio-list li {
+	font-size: 0.95em;
+	padding-bottom: 0.5em;
+}
+
+.portfolio-list a {
+	color: #eb1478;
+}
+
+.portfolio-list a:visited {
+	color: rgb(18, 5, 134);
+}
+
+/* ---- Contanct card ---- */
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2em;
+	margin-bottom: 2em;
+	margin-top: 3em;
+	border-top: 2px solid #eb1478;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	width: 310px;
+}
+
+.contact img {
+	height: 64px;
+	margin-right: 1em;
+}
+
+.address,
+.tel,
+.email {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/* ================================= 
+  Media quieries 
+==================================== */
+
+@media (min-width: 560px) {
+	.about {
+		display: inline-block;
+	}
+
+	.about article {
+		padding-right: 2em;
+	}
+
+
+	.img-author {  
+		float: right;
+		margin-left: 2em;
+		margin-top: 8em;
+		margin-bottom: 20px;
+		width: 300px;
+		height: 310px;
+		border-radius: 80%;
+	}
+
+	.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+	  }
+}
+
+
+
+@media (min-width: 768px) {
+
+	
+	
+	.container {
+		width: 70%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.wrap {
+		min-height: calc(100vh-89px);	
+	}
+	
+	
+
+	.slideshow-container {
+		max-width: 1000px;
+	}
+
+
+
+	.headline {
+		font-size: 2em;
+		margin-bottom: 10px;
+	}
+	
+	.tagline {
+		font-size: 1.4em;
+	}
+
+@media (min-width: 840px) {
+	body {
+		padding-top: 56px;
+	}
+
+
+	.main-header {
+		display: flex;
+		justify-content: center;
+	}
+
+
+	.main-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 200;
+		max-height: 104px;
+
+	}
+
+	.container-nav {
+		width: 80%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.name {
+		align-self: center;
+	}
+
+	.name img {
+		margin-top: 6px;
+	}
+
+	.hamburger {
+		display: none;
+		height: auto;
+	}
+
+	.hamburger-nav {
+		display: none;
+	}
+
+	.main-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		border-bottom: 1px solid transparent;
+	}
+
+	.main-nav li {
+		margin-left: 1em;
+		margin-right: 1em; /* 5px */
+		padding-bottom: 3px;
+	}
+
+	
+}
+
+
+@media (min-width:1032px) {
+
+	/* .main-header {
+		height: 58px;
+	}
+	
+	.container-nav {
+		width: 80%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	.name {
+		align-self: auto;
+	}
+	.main-nav a {
+		border-bottom: 0px;
+		padding-top: 4px;
+	}
+
+	.main-nav a:hover {
+		padding-top: 6px;
+	} */
+
+	.about {
+		display: flex;
+		flex-flow: row-reverse;
+	}
+
+	.img-author {
+		align-self: flex-start;
+		margin-top: 8em;
+	}
+
+	.slideshow-container {
+		width: 620px;
+	}
+
+}
+
+
+
+@media(min-width: 1150px) {
+	.main-header {
+		height: 58px;
+	}
+	
+	.container-nav {
+		width: 80%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	.name {
+		align-self: auto;
+	}
+	.main-nav a {
+		border-bottom: 0px;
+		padding-top: 4px;
+	}
+
+	.main-nav a:hover {
+		padding-top: 6px;
+	}
+}
+	
+@media (min-width: 1200px) {
+
+	.about {
+		justify-content: space-between;
+	}
+
+	.img-author {
+		margin-left: 3em;
+		
+	}
+
+	.offer {
+		display: flex;
+		flex-flow: row;
+	}
+	.offer p {
+		display: flex;
+		flex-flow: row;
+	}
+	.oferta_tworze {
+		margin-right: 2em;
+	}
+}
+	
+@media (min-width: 1400px) {
+	.img-author {
+		align-self: flex-start;
+		margin-top: 10em;
+	}
+}
+	/* ---- Contact info ---- */
